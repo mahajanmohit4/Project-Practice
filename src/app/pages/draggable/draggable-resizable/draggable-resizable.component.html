@@ -17,5 +17,53 @@
       <mat-icon>cancel</mat-icon>
     </div>
   </header>
-  I'm now draggable and resizable
+  <div fxLayout="row" fxLayoutAlign="end center">Results:</div>
+  <div class="searchContainer" FxLayoutGap="20px">
+    <div class="seachItemContainer" *ngFor="let data of searchResults">
+      <div fxFlex="35" fxLayoutAlign="center center">
+        <img [src]="data.img" style="width: 100%" />
+      </div>
+      <div
+        fxFlex="65"
+        fxLayoutGap="10px"
+        style="border: 1px solid #000000; background-color: white"
+      >
+        <div
+          fxLayout="column"
+          fxLayoutAlign="stretch"
+          fxLayoutGap="5px"
+          style="padding: 10px"
+        >
+          <span
+            ><strong>SHORT DESCRIPTION</strong> &nbsp;&nbsp;<small
+              ><a
+                style="cursor: pointer; text-decoration: underline; color: blue"
+                (click)="copyasText(data, 'SD')"
+                >copy text to clipboard</a
+              ></small
+            ></span
+          >
+          <p>{{ data.short_desc }}</p>
+        </div>
+        <hr />
+        <div
+          fxLayout="column"
+          fxLayoutAlign="stretch"
+          fxLayoutGap="5px"
+          style="padding: 10px"
+        >
+          <span
+            ><strong>LONG DESCRIPTION</strong> &nbsp;&nbsp;<small
+              ><a
+                style="cursor: pointer; text-decoration: underline; color: blue"
+                (click)="copyasText(data, 'LD')"
+                >copy text to clipboard</a
+              ></small
+            ></span
+          >
+          <p>{{ data.desc }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
