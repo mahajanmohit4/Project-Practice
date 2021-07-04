@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 
+declare const require: any;
+
 @Component({
   selector: 'app-draggable',
   templateUrl: './draggable.component.html',
-  styleUrls: ['./draggable.component.scss']
+  styleUrls: ['./draggable.component.scss'],
 })
 export class DraggableComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
