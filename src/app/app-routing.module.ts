@@ -5,8 +5,8 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () =>
-      import('./pages/draggable/draggable.module').then(
-        (m) => m.DraggableModule
+      import('./pages/draggable/passing-data/passing-data.module').then(
+        (m) => m.PassingDataModule
       ),
   },
 ];

@@ -33,6 +33,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatChipsModule } from '@angular/material/chips';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatFormFieldModule } from '@angular/material/form-field';
+
 @NgModule({
   declarations: [],
   imports: [
@@ -70,6 +72,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatDividerModule,
     MatBadgeModule,
     MatChipsModule,
+    MatFormFieldModule,
   ],
 })
 export class MaterialModule {}

@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-declare const require: any;
-
 @Component({
   selector: 'app-draggable',
   templateUrl: './draggable.component.html',
