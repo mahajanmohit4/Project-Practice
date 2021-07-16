@@ -1,0 +1,48 @@
+<p>flowchart-standalone works!</p>
+<div *ngFor="let d of jsonData">
+  <span style="margin: 2px">
+    {{ d.id }}
+  </span>
+  <span style="margin: 2px">
+    <input type="textarea" [(ngModel)]="d.text" />
+  </span>
+  <span style="margin: 2px" *ngFor="let c of d.connections">
+    <span *ngFor="let cc of c; let i = index"> {{ i }} {{ cc[i] }} </span>
+  </span>
+</div>
+<button (click)="getData()">submit</button>
+
+<div style="border: 2px; padding: 2px" *ngFor="let json of dummyData">
+  <div style="margin: 2px; padding: 2px; border: 1px solid black" fxFlex="25">
+    <div
+      fxLayout="row"
+      fxLayoutAlign="stretch"
+      fxLayoutGap="5px"
+      style="margin-bottom: 8px"
+    >
+      <span>{{ json.id }}</span
+      >&nbsp;&nbsp; <span> <b>Shape : </b>{{ json.shape }}</span>
+    </div>
+
+    <div fxLayout="row" fxLayoutAlign="stretch" fxLayoutGap="5px">
+      <textarea [(ngModel)]="json.text"></textarea>
+    </div>
+  </div>
+  <div style="margin: 2px; padding: 2px; border: 1px solid black" fxFlex="75">
+    <div fxLayout="row" fxLayoutAlign="start start">
+      <span
+        style="margin-right: 5px"
+        *ngFor="let collection of json.connections"
+      >
+        <div style="margin-bottom: 5px">
+          <span>{{ collection.id }}</span
+          >&nbsp;&nbsp; <span> <b>Shape : </b>{{ collection.shape }}</span>
+        </div>
+
+        <div>
+          <textarea [(ngModel)]="collection.text"></textarea>
+        </div>
+      </span>
+    </div>
+  </div>
+</div>

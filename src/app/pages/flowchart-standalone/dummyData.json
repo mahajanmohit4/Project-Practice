@@ -1,0 +1,117 @@
+[
+    {
+       "id": "B1D",
+       "shape": "Rhombus",
+       "text": "score < 60",
+       "is_connected_to_end": false,
+       "connections": [
+          {
+             "id": "B2P",
+             "shape": "Parallelogram",
+             "text": "Display \"Your grade is F.\"",
+             "arrow-label": "True"
+          },
+          {
+             "id": "B3D",
+             "shape": "Rhombus",
+             "text": "score < 70",
+             "arrow-label": "False"
+          }
+       ]
+    },
+    {
+       "id": "B2P",
+       "shape": "Parallelogram",
+       "text": "Display \"Your grade is F.\"",
+       "is_connected_to_end": true,
+       "connections": []
+    },
+    {
+       "id": "B3D",
+       "shape": "Rhombus",
+       "text": "score < 70",
+       "is_connected_to_end": false,
+       "connections": [
+          {
+             "id": "B4P",
+             "shape": "Parallelogram",
+             "text": "Display \"Your grade is D.\"",
+             "arrow-label": "True"
+          },
+          {
+             "id": "B5D",
+             "shape": "Rhombus",
+             "text": "score < 80",
+             "arrow-label": "False"
+          }
+       ]
+    },
+    {
+       "id": "B4P",
+       "shape": "Parallelogram",
+       "text": "Display \"Your grade is D.\"",
+       "is_connected_to_end": true,
+       "connections": []
+    },
+    {
+       "id": "B5D",
+       "shape": "Rhombus",
+       "text": "score < 80",
+       "is_connected_to_end": false,
+       "connections": [
+          {
+             "id": "B6P",
+             "shape": "Parallelogram",
+             "text": "Display \"Your grade is C.\"",
+             "arrow-label": "True"
+          },
+          {
+             "id": "B7D",
+             "shape": "Rhombus",
+             "text": "score <90",
+             "arrow-label": "False"
+          }
+       ]
+    },
+    {
+       "id": "B6P",
+       "shape": "Parallelogram",
+       "text": "Display \"Your grade is C.\"",
+       "is_connected_to_end": true,
+       "connections": []
+    },
+    {
+       "id": "B7D",
+       "shape": "Rhombus",
+       "text": "score <90",
+       "is_connected_to_end": false,
+       "connections": [
+          {
+             "id": "B8P",
+             "shape": "Parallelogram",
+             "text": "Display \"Your grade is A.\"",
+             "arrow-label": "False"
+          },
+          {
+             "id": "B9P",
+             "shape": "Parallelogram",
+             "text": "Display \"Your grade is B.\"",
+             "arrow-label": "True"
+          }
+       ]
+    },
+    {
+       "id": "B8P",
+       "shape": "Parallelogram",
+       "text": "Display \"Your grade is A.\"",
+       "is_connected_to_end": true,
+       "connections": []
+    },
+    {
+       "id": "B9P",
+       "shape": "Parallelogram",
+       "text": "Display \"Your grade is B.\"",
+       "is_connected_to_end": true,
+       "connections": []
+    }
+ ]
