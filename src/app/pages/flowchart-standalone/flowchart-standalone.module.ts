@@ -8,6 +8,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [FlowchartStandaloneComponent],
@@ -20,6 +21,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatButtonModule,
     FormsModule,
     FlexLayoutModule,
+    MatIconModule,
   ],
   exports: [FlowchartStandaloneComponent],
 })

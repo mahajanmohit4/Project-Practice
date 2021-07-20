@@ -1,18 +1,9 @@
-<p>flowchart-standalone works!</p>
-<div *ngFor="let d of jsonData">
-  <span style="margin: 2px">
-    {{ d.id }}
-  </span>
-  <span style="margin: 2px">
-    <input type="textarea" [(ngModel)]="d.text" />
-  </span>
-  <span style="margin: 2px" *ngFor="let c of d.connections">
-    <span *ngFor="let cc of c; let i = index"> {{ i }} {{ cc[i] }} </span>
-  </span>
-</div>
 <button (click)="getData()">submit</button>
 
-<div style="border: 2px; padding: 2px" *ngFor="let json of dummyData">
+<div
+  style="border: 2px; padding: 2px"
+  *ngFor="let json of dummyData; let i = index"
+>
   <div style="margin: 2px; padding: 2px; border: 1px solid black" fxFlex="25">
     <div
       fxLayout="row"
@@ -21,7 +12,11 @@
       style="margin-bottom: 8px"
     >
       <span>{{ json.id }}</span
-      >&nbsp;&nbsp; <span> <b>Shape : </b>{{ json.shape }}</span>
+      >&nbsp;&nbsp;
+      <span>
+        <b>Shape : </b
+        ><input type="text" style="width: 83px" [(ngModel)]="json.shape"
+      /></span>
     </div>
 
     <div fxLayout="row" fxLayoutAlign="stretch" fxLayoutGap="5px">
@@ -32,15 +27,28 @@
     <div fxLayout="row" fxLayoutAlign="start start">
       <span
         style="margin-right: 5px"
-        *ngFor="let collection of json.connections"
+        *ngFor="let collection of json.connections; let j = index"
       >
         <div style="margin-bottom: 5px">
           <span>{{ collection.id }}</span
-          >&nbsp;&nbsp; <span> <b>Shape : </b>{{ collection.shape }}</span>
+          >&nbsp;&nbsp;
+          <span>
+            <b>Shape : </b
+            ><input
+              type="text"
+              style="width: 83px"
+              [(ngModel)]="collection.shape"
+          /></span>
         </div>
 
         <div>
           <textarea [(ngModel)]="collection.text"></textarea>
+        </div>
+        <div>
+          <button (click)="deleteNode(i, j)">
+            <mat-icon>delete</mat-icon>
+          </button>
+          <button (click)="addNode(i, j)"><mat-icon>add</mat-icon></button>
         </div>
       </span>
     </div>

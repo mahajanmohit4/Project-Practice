@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class FlowchartStandaloneComponent implements OnInit {
   constructor() {}
   practiceData;
+  dummyData;
   ngOnInit(): void {
     this.Data();
     this.Data1();
@@ -62,8 +63,24 @@ export class FlowchartStandaloneComponent implements OnInit {
 
   getData() {
     console.log('get data ', this.jsonData);
+    console.log('get data1 ', this.dummyData);
   }
-  dummyData;
+
+  deleteNode(i, j) {
+    console.log('i : ', i, ' j : ', j);
+    this.dummyData[i].connections.splice(j, 1);
+    console.log(' row ', this.dummyData[i].connections);
+  }
+  addNode(i, j) {
+    console.log('add node ', i, j);
+    let add = {
+      id: '',
+      shape: '',
+      text: '',
+    };
+    this.dummyData[i].connections.splice(j + 1, 0, add);
+  }
+
   Data1() {
     this.dummyData = [
       {
