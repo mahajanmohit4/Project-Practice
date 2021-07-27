@@ -54,3 +54,20 @@
     </div>
   </div>
 </div>
+
+<input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
+<input
+  name="checkbox_name"
+  id="checkbox_id"
+  type="checkbox"
+  value="{{ chk }}"
+  (change)="check($event.target.value)"
+  checked="{{ chk }}"
+/>
+<!-- <mat-checkbox
+  class="example-margin"
+  val
+  (onChange)="check($event.target.value)"
+  checked="{{ chk }}"
+  >Checked</mat-checkbox
+> -->

@@ -9,7 +9,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatIconModule } from '@angular/material/icon';
-
+import { MatCheckboxModule } from '@angular/material/checkbox';
 @NgModule({
   declarations: [FlowchartStandaloneComponent],
   imports: [
@@ -22,6 +22,7 @@ import { MatIconModule } from '@angular/material/icon';
     FormsModule,
     FlexLayoutModule,
     MatIconModule,
+    MatCheckboxModule,
   ],
   exports: [FlowchartStandaloneComponent],
 })

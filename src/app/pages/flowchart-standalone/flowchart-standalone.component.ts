@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FlowchartStandaloneService } from './flowchart-standalone.service';
 
 @Component({
   selector: 'app-flowchart-standalone',
@@ -6,12 +7,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./flowchart-standalone.component.scss'],
 })
 export class FlowchartStandaloneComponent implements OnInit {
-  constructor() {}
+  constructor(private flowchartStandaloneService: FlowchartStandaloneService) {}
   practiceData;
   dummyData;
   ngOnInit(): void {
-    this.Data();
-    this.Data1();
+    // this.Data();
+    // this.Data1();
+    var data = { '\\id\\': '\\23232\\', '\\pass\\': '\\1434\\' };
+    console.log(data);
+    var b = JSON.stringify(data);
+    const str = b.replace(/\\/g, '');
+    console.log(' String ===? ', str);
+  }
+  chk = true;
+  check(val) {
+    console.log('check val ', val);
+    console.log('check val11111 ', this.chk);
   }
   jsonData;
   jsonDate1;
