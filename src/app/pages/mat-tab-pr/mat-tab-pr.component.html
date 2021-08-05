@@ -1,0 +1,31 @@
+<h1>Mat tab</h1>
+
+<div class="padding">
+  <nav mat-tab-nav-bar>
+    <a
+      mat-tab-link
+      (click)="First()"
+      [routerLink]="['/1']"
+      [active]="activeLink == 'first'"
+    >
+      First
+    </a>
+    <a
+      mat-tab-link
+      (click)="Second()"
+      [routerLink]="['/2']"
+      [active]="activeLink == 'second'"
+    >
+      Second
+    </a>
+    <a
+      mat-tab-link
+      (click)="Third()"
+      [routerLink]="['/3']"
+      [active]="activeLink == 'third'"
+    >
+      Third
+    </a>
+  </nav>
+  <router-outlet></router-outlet>
+</div>

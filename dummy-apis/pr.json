@@ -1,0 +1,22 @@
+{
+  "fileDetails": [
+    {
+      "id": 1,
+      "file_name": "demo.pdf",
+      "page_count": 1,
+      "file_type": "pdf"
+    }
+  ],
+  "fileInfo": [
+    {
+      "id":1,
+      "file_name": "demo.pdf",
+      "file_type": "pdf",
+      "delivery_data": "12/12/2021",
+      "price_per_page": 4.50,
+      "page_count": 5,
+      "total_price": 22.5
+    }
+  ]
+  
+}

@@ -12,8 +12,8 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () =>
-      import('./pages/flowchart-standalone/flowchart-standalone.module').then(
-        (m) => m.FlowchartStandaloneModule
+      import('./pages/mat-tab-pr/mat-tab-pr.module').then(
+        (m) => m.MatTabPrModule
       ),
   },
 ];
